@@ -1,6 +1,7 @@
 import {
   ConflictException,
   HttpException,
+  HttpStatus,
   Inject,
   Injectable,
   InternalServerErrorException,
@@ -42,7 +43,14 @@ export class BlogsService {
   }
 
   findOne(id: string) {
-    return this.blogModel.findById(id);
+    const blog = this.blogModel.findById(id);
+    if (blog) {
+      return blog;
+    }
+    throw new HttpException(
+      'This blog ID does not exists',
+      HttpStatus.NOT_FOUND,
+    );
   }
 
   update(id: string, updateBlogDto: UpdateBlogDto) {
