@@ -3,6 +3,11 @@ import { Document } from 'mongoose';
 
 export type BlogDocument = Blog & Document;
 
+export type Comments = {
+  userName: string;
+  comment: string;
+};
+
 @Schema()
 export class Blog {
   @Prop({
@@ -29,7 +34,7 @@ export class Blog {
   content: string;
 
   @Prop({ required: false })
-  comments: string[];
+  comments: Comments[];
 }
 
 export const BlogSchema = SchemaFactory.createForClass(Blog);

@@ -12,12 +12,6 @@ import { Model, Document } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 import { Blog, BlogDocument } from 'src/schemas/blog.schema';
 
-export interface BlogInterface extends Document {
-  readonly name: string;
-  readonly age: number;
-  readonly breed: string;
-}
-
 @Injectable()
 export class BlogsService {
   constructor(
