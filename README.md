@@ -60,7 +60,10 @@ $ npm run test:cov
 
 ## Support
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+You must enter your MongoDB URL app.module.ts file to make your database accessible.
+Have fun!
+
+I am happy to colloaborate , connect to me via LinkedIn -> https://www.linkedin.com/in/akshay-deosthale/
 
 ## Stay in touch
 
