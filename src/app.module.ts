@@ -9,9 +9,7 @@ import { CategoryModule } from './category/category.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot(
-      'mongodb+srv://akshay:akshay@cluster0.rns1o.mongodb.net/?retryWrites=true&w=majority',
-    ),
+    MongooseModule.forRoot('your mongodb address'),
     BlogsModule,
     UsersModule,
     CommentsModule,
